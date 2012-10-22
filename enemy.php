@@ -32,15 +32,26 @@ $title[] = "The Brutal";
 $title[] = "The Slimy";
 $title[] = "The ";
 
-
-	//select a random name
 	$n = $name[rand(0, count($name) - 1)];
 	
-	//select a random element
 	$e = $element[rand(0, count($element) - 1)];
-	
-	//select a random title
-	$t = $title[rand(0, count($title) - 1)];
 
+	$t = $title[rand(0, count($title) - 1)];
+$monsterName = array($t, $e, $n);
+//$i=0;
+//foreach ($title as $a )
+{
+	
+//	foreach ($element as $b )
+	{
+
+//		foreach ($name as $c )
+		{
+//			$i++;
+//			echo "$i $a"." "."$b"." "."$c</br>";
+		}
+
+	}
+}
 
 ?>
