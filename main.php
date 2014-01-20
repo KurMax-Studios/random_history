@@ -1,17 +1,20 @@
 <?php
 
-include 'enemy.php';
-include 'damage.php';
+echo"<title>Big Adventure</title>";
 
-$enemy="$t $e $n";
+include 'enemy.php';
+randomEnemy();
+$combatLog="";
+include 'combat.php';
+include 'stats.php';
+
+$enemy="". $monsterName['title'] ." ". $monsterName['element'] ." ". $monsterName['name'] ."";
 $player=$_POST["player"];
+
 echo "<h1>". $player ."'s big adventure</h1>";
-echo "$player vs $enemy";
-echo"</br> $playerDamage $enemyDamage";
-echo"</br> player $pAttack $pHealth";
-echo"</br> enemy ". $attack ." ". $health ."";
-//for ($health>=0 && $pHealth>=0)
-{
-	
-}
+echo "$player vs $enemy</br>";
+
+$combatLog = combat(stats($monsterName), $combatLog, $enemy, $player);
+echo "$combatLog"
+
 ?>
